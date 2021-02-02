@@ -6,7 +6,7 @@ function getPage({ url, format, requestMethod }) {
   if (format === 'info' || requestMethod === 'HEAD') {
     return getPageInfo(url)
   } else if (format === 'raw') {
-    return getRawPage(url, requestMethod)
+    return getRawPage(`${url}&APIKey=${process.env.[SmugMugApiKey]}&_accept=application%2Fjson`, requestMethod)
   }
 
   return getPageContents(url, requestMethod)
