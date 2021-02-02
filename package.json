@@ -6,6 +6,7 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
+    "start": "node server.js",
     "test": "yarn prettier && jest --coverage",
     "push": "vpdate && git push",
     "prettier": "prettier -c ./test ./app"
