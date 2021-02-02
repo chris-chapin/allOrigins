@@ -9,7 +9,7 @@ async function processRequest(req, res) {
   const startTime = new Date()
   const params = parseParams(req)
 
-  if (params.requestMethod === 'OPTIONS') {
+  if (params.requestMethod === 'OPTIONS' || params.format !== 'raw') {
     return res.end()
   }
 
